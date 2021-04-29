@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import scores from "./scores";
+
 
 const SortButton = () => {
   const [isAscending, setIsAscending] = useState(true);

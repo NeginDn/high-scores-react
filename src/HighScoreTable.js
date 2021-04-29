@@ -10,7 +10,7 @@ const HighScoreTable = (props) => {
       {finalScores.map((eachCountry, index) => {
         return (
           <div>
-            <h3 key={index} className="cell p-3 my-3  mx-auto">
+            <h3 key={index}  className="cell p-3 my-3  mx-auto">
               High Scores:
               {eachCountry.name}
             </h3>
