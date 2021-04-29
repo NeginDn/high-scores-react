@@ -37,6 +37,10 @@
   }
 }
 
-h1 {
+h1, h3 {
   color: rgb(40, 196, 207);
+}
+
+.playerScore-score{
+  color:rgb(125, 11, 26)
 }

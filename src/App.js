@@ -1,14 +1,19 @@
 import React from "react";
+import "./App.css";
+import scores from "./scores";
+
+import SortButton from "./SortButton.js";
 import HighScoreTable from "./HighScoreTable.js";
 import PageHeading from "./PageHeading";
 
-import "./App.css";
+
 
 function App() {
   return (
     <div className="App">
+     <SortButton />
       <PageHeading />
-      <HighScoreTable />
+      <HighScoreTable result={scores} />
     </div>
   );
 }
