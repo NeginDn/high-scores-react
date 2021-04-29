@@ -1,5 +1,6 @@
 import React from "react";
 import PlayerScore from "./PlayerScore";
+import TableHeading from "./TableHeading";
 
 const HighScoreTable = (props) => {
   let finalScores = props.result.sort((countryOne, countryTwo) => {
@@ -7,13 +8,10 @@ const HighScoreTable = (props) => {
   });
   return (
     <div>
-      {finalScores.map((eachCountry, index) => {
+      {finalScores.map((eachCountry) => {
         return (
           <div>
-            <h3 key={index}  className="cell p-3 my-3  mx-auto">
-              High Scores:
-              {eachCountry.name}
-            </h3>
+            <TableHeading country={eachCountry} />
             <PlayerScore player={eachCountry.scores} />
           </div>
         );
