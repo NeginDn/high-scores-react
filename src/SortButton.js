@@ -1,13 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
 
-const SortButton = () => {
-  const [isAscending, setIsAscending] = useState(true);
-  const sortScores = () => {
-    setIsAscending(isAscending ? !isAscending : isAscending);
-  };
+const SortButton = (props) => {
   return (
-    <button onClick={sortScores} className="btn btn-primary">
+    <button onClick={props.onClick} className="btn btn-primary m-5">
       Sort scores
     </button>
   );

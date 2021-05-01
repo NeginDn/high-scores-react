@@ -1,26 +1,16 @@
 import React from "react";
+import EachPlayerName from "./EachPlayerName";
+import EachPlayerScore from "./EachPlayerScore";
+
 
 const PlayerScore = (props) => {
-  const { player } = props;
-  const finalScores = player.sort((firstPlayer, secondPlayer) => {
-    return firstPlayer.s < secondPlayer.s ? 1 : -1;
-  });
-
+  const { key, playerName, playerScore } = props;
   return (
-    <div className="table-responsive w-100 border border-dark mx-auto">
-      <table className="table p-2 mx-auto">
-        <tbody>
-          {finalScores.map((eachPlayer, index) => {
-            return (
-              <tr key={index}>
-                <td>{eachPlayer.n}</td>
-                <td className="playerScore-score">{eachPlayer.s}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
+    <tr key={key}>
+      <EachPlayerName playerName={playerName} />
+      <EachPlayerScore playerScore={playerScore} />
+    </tr>
   );
 };
+
 export default PlayerScore;
